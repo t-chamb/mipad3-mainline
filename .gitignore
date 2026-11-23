@@ -1,0 +1,28 @@
+# device backups, boot images and anything built
+*.img
+build/
+spike/
+dt-fs/
+dt.tar
+# raw captures from this particular tablet (serial numbers, MAC addresses)
+live.dts
+cmdline.txt
+atf_last.txt
+atf_log.txt
+iomem-ram.txt
+*.full
+# the kernel changes live in the kernel branch; these are scratch copies
+patches/
+# local settings for the tools (adb serial)
+tools/local.env
+# build products of the bare-metal test payloads
+canary/*.bin
+canary/*.gz
+canary/*.elf
+canary/*.gz-dtb
+canary/*.o
+# reference trees that have their own homes (vendor kernel source, Fire HD 10 port)
+downstream-xiaomi8176_tb_c9_n.dts
+ref-mt8173-amazon-suez.dts
+# not run on the tablet yet
+userspace/tests/vk_disp.c
